@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <title>Tell Me Whyyy</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Tell Me Whyyy</h1>
+    <p>
+      This webapp analyzes the sentiment of an article, identifying positivity, 
+      negativity and polarity of the text.
+    </p>
+    <p class="text-information">
+      Put the website url there and let's see.
+    </p>
+    <form>
+      <input type="text" name="url" id="url">
+      <button onclick="return Client.handleSubmit(event)" value="submit">
+        <i class="fa fa-search fa-1x"></i>
+      </button>
+    </form>
+
+    <div class="content">
+      <div id="error-message"></div>
+      <div id="score"></div>
+      <div id="agreement"></div>
+      <div id="subjectivity"></div>
+      <div id="confidence"></div>
+      <div id="irony"></div>
+    </div>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>
