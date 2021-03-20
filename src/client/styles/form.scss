@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3em;
+
+  input {
+    border-radius: 6px;
+    border: 0;
+    height: 2em;
+    margin-right: 1em;
+    width: 100%;
+
+    &:hover {
+      outline: none !important;
+      border:1px solid #617073;
+      box-shadow: 0 0 10px #92BCEA;
+    }
+
+    &:focus {
+      outline: none !important;
+      border:1px solid #171A21;
+      box-shadow: 0 0 10px #7A93AC;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #AFB3F7;
+    color: #171A21;
+    font-size: 1.5em;
+  }
+}
+
+@media(min-width: 1200px) {
+  .container {
+    width: 60%;
+
+    form {
+      width: 80%
+    }
+  }
+}
