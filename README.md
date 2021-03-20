@@ -26,6 +26,11 @@ Step 4: Create your local bundle
 
     npm run build-prod
 
+Step 5: Runs the server
+
+    npm run start
+
+
 ## Running the tests
 
 I used jest to do the tests. To run the tests just use the command `npm test`
